@@ -28,8 +28,8 @@
 	},
 	"devDependencies": {
 		"@atlastint/config": "workspace:*",
-		"@biomejs/biome": "^2.5.13",
-		"@playwright/test": "^1.63.0",
+		"@biomejs/biome": "^2.5.15",
+		"@playwright/test": "^1.64.1",
 		"@types/node": "catalog:",
 		"d3-geo": "^3.1.1",
 		"shapefile": "^0.6.6",
