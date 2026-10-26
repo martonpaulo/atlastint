@@ -15,7 +15,7 @@
 	"dependencies": {
 		"@atlastint/ui": "workspace:*",
 		"@tailwindcss/vite": "^4.3.2",
-		"@tanstack/react-router": "^1.170.35",
+		"@tanstack/react-router": "^1.170.46",
 		"d3-geo": "^3.1.1",
 		"d3-geo-projection": "^4.0.0",
 		"d3-selection": "^3.0.0",
@@ -26,7 +26,7 @@
 		"sonner": "catalog:",
 		"topojson-client": "^3.1.0",
 		"zod": "catalog:",
-		"zustand": "^5.0.15"
+		"zustand": "^5.0.16"
 	},
 	"devDependencies": {
 		"@atlastint/config": "workspace:*",
