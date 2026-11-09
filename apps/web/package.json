@@ -30,12 +30,12 @@
 	},
 	"devDependencies": {
 		"@atlastint/config": "workspace:*",
-		"@playwright/test": "^1.63.0",
+		"@playwright/test": "^1.65.0",
 		"@tanstack/react-router-devtools": "^1.167.2",
-		"@tanstack/router-plugin": "^1.168.38",
+		"@tanstack/router-plugin": "^1.168.48",
 		"@testing-library/jest-dom": "^7.0.1",
 		"@testing-library/react": "^16.3.3",
-		"@testing-library/user-event": "^14.6.7",
+		"@testing-library/user-event": "^14.6.8",
 		"@types/d3-geo": "^3.1.1",
 		"@types/d3-selection": "^3.0.11",
 		"@types/d3-zoom": "^3.0.8",
@@ -45,12 +45,12 @@
 		"@types/react-dom": "catalog:",
 		"@types/topojson-client": "^3.1.5",
 		"@types/topojson-specification": "^1.0.5",
-		"@vitejs/plugin-react": "^6.1.1",
+		"@vitejs/plugin-react": "^6.2.1",
 		"jsdom": "^29.1.1",
-		"postcss": "^8.5.28",
+		"postcss": "^8.5.32",
 		"tailwindcss": "catalog:",
 		"typescript": "catalog:",
-		"vite": "^8.3.0",
-		"vitest": "^4.1.11"
+		"vite": "^8.3.6",
+		"vitest": "^4.1.12"
 	}
 }
