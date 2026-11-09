@@ -31,7 +31,7 @@
 		"@biomejs/biome": "^2.5.13",
 		"@playwright/test": "^1.63.0",
 		"@types/node": "catalog:",
-		"d3-geo": "^3.1.1",
+		"d3-geo": "^3.1.2",
 		"shapefile": "^0.6.6",
 		"topojson-client": "^3.1.0",
 		"topojson-server": "^3.0.1",
