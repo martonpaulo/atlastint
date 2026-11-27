@@ -1,0 +1,123 @@
+{
+	"magicValues": {
+		"folders": [],
+		"exclude": [
+			"scripts/dry_check.py",
+			"scripts/issue_links.py",
+			"scripts/live_build_check.py",
+			"scripts/shortcut_check.py",
+			"scripts/sleep_guard.py",
+			"scripts/text_check.py",
+			"scripts/skd/**"
+		],
+		"counts": {
+			"apps/web/e2e/atlas.spec.ts": {
+				"number": 21,
+				"repeated": 13,
+				"url": 1
+			},
+			"apps/web/playwright.config.ts": {
+				"number": 3,
+				"url": 2
+			},
+			"apps/web/src/components/about-dialog.tsx": {
+				"repeated": 4,
+				"url": 6
+			},
+			"apps/web/src/components/site-credit.tsx": {
+				"number": 2
+			},
+			"apps/web/src/features/atlas/bundle.ts": {
+				"number": 1
+			},
+			"apps/web/src/features/atlas/colors.ts": {
+				"colour": 3,
+				"number": 8,
+				"repeated": 1
+			},
+			"apps/web/src/features/atlas/components/atlas-sidebar.tsx": {
+				"number": 1
+			},
+			"apps/web/src/features/atlas/components/data-actions.tsx": {
+				"repeated": 4
+			},
+			"apps/web/src/features/atlas/components/map-workspace.tsx": {
+				"number": 4,
+				"repeated": 5
+			},
+			"apps/web/src/features/atlas/components/viewport-gate.tsx": {
+				"number": 2
+			},
+			"apps/web/src/features/atlas/destructive-copy.ts": {
+				"repeated": 1
+			},
+			"apps/web/src/features/atlas/import-diff.ts": {
+				"repeated": 1
+			},
+			"apps/web/src/features/atlas/import-limits.ts": {
+				"number": 5
+			},
+			"apps/web/src/features/atlas/persistence-schema.ts": {
+				"number": 2
+			},
+			"apps/web/src/features/atlas/presets/brazil.ts": {
+				"number": 5
+			},
+			"apps/web/src/features/atlas/presets/spain.ts": {
+				"number": 31
+			},
+			"apps/web/src/features/atlas/presets/world.ts": {
+				"number": 6
+			},
+			"apps/web/src/features/atlas/projection-registry.ts": {
+				"repeated": 1
+			},
+			"apps/web/src/features/atlas/projections.ts": {
+				"number": 9
+			},
+			"apps/web/src/features/atlas/search.ts": {
+				"number": 5
+			},
+			"apps/web/src/features/atlas/store.ts": {
+				"number": 1
+			},
+			"apps/web/vite.config.ts": {
+				"number": 1
+			},
+			"design/social-card/make-world.mjs": {
+				"colour": 5,
+				"number": 3,
+				"url": 1
+			},
+			"packages/ui/src/components/dropdown-menu.tsx": {
+				"number": 2
+			},
+			"scripts/geo/build.mjs": {
+				"number": 8
+			},
+			"scripts/geo/check.mjs": {
+				"number": 2
+			},
+			"scripts/geo/manifest-seeds.mjs": {
+				"number": 3,
+				"repeated": 1
+			},
+			"scripts/geo/sources.mjs": {
+				"number": 2,
+				"url": 3
+			}
+		}
+	},
+	"duplicates": {
+		"depth": 1,
+		"exclude": ["scripts/skd/**"],
+		"counts": {
+			"apps": 3
+		}
+	},
+	"documents": {
+		"files": ["*.md", "docs/**/*.md"],
+		"exclude": [],
+		"repeated": {}
+	}
+}

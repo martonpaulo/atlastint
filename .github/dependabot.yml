@@ -1,7 +1,10 @@
 version: 2
 updates:
   - package-ecosystem: npm
-    directory: /
+    directories:
+      - /
+      - /apps/web
+      - /packages/ui
     schedule:
       interval: weekly
       day: monday
