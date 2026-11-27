@@ -168,24 +168,27 @@ export function AtlasApp() {
 				</div>
 			) : (
 				<main className="grid min-h-0 place-items-center bg-map-canvas p-8">
-					<section className="max-w-md rounded-xl border border-border bg-card p-8 text-center shadow-card">
-						<AlertTriangle
-							className="mx-auto size-8 text-destructive"
-							aria-hidden="true"
-						/>
-						<h1 className="mt-4 font-semibold font-serif text-2xl">
-							The map did not load
-						</h1>
-						<p className="mt-2 text-muted-foreground text-sm leading-6">
-							{loadState.message}
-						</p>
-						<Button
-							className="mt-6"
-							onClick={() => setRetryKey((value) => value + 1)}
-						>
-							Try again
-						</Button>
-					</section>
+					{/* The card is a container: its width cap holds the card, and the text fills the card. */}
+					<div className="w-full max-w-md">
+						<section className="rounded-xl border border-border bg-card p-8 text-center shadow-card">
+							<AlertTriangle
+								className="mx-auto size-8 text-destructive"
+								aria-hidden="true"
+							/>
+							<h1 className="mt-4 font-semibold font-serif text-2xl">
+								The map did not load
+							</h1>
+							<p className="mt-2 text-muted-foreground text-sm leading-6">
+								{loadState.message}
+							</p>
+							<Button
+								className="mt-6"
+								onClick={() => setRetryKey((value) => value + 1)}
+							>
+								Try again
+							</Button>
+						</section>
+					</div>
 				</main>
 			)}
 

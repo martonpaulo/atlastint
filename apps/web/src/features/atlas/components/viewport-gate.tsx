@@ -28,29 +28,34 @@ export function ViewportGate({ children }: { children: ReactNode }) {
 	if (supported) return children;
 	return (
 		<main className="grid min-h-svh grid-rows-[1fr_auto] bg-background text-foreground">
-			<section
-				className="max-w-xl place-self-center px-8 py-10 text-center"
-				aria-labelledby="viewport-title"
-			>
-				<div className="mx-auto mb-6 grid size-16 place-items-center rounded-xl border border-border bg-card text-primary shadow-card">
-					<MonitorUp className="size-7" aria-hidden="true" />
-				</div>
-				<p className="mb-2 text-eyebrow text-muted-foreground">Desktop atlas</p>
-				<h1
-					id="viewport-title"
-					className="font-semibold font-serif text-4xl tracking-tight"
+			{/* The column is a container: its width cap is the page column, and the text fills it. */}
+			<div className="w-full max-w-xl place-self-center">
+				<section
+					className="px-8 py-10 text-center"
+					aria-labelledby="viewport-title"
 				>
-					Give the map more room
-				</h1>
-				<p className="mt-4 text-base text-muted-foreground leading-7">
-					AtlasTint requires a browser window of at least 1024 × 700 CSS pixels.
-					Enlarge this window or move it to a larger desktop display; the atlas
-					will open automatically.
-				</p>
-				<p className="mt-6 text-muted-foreground text-sm">
-					Your saved progress remains untouched.
-				</p>
-			</section>
+					<div className="mx-auto mb-6 grid size-16 place-items-center rounded-xl border border-border bg-card text-primary shadow-card">
+						<MonitorUp className="size-7" aria-hidden="true" />
+					</div>
+					<p className="mb-2 text-eyebrow text-muted-foreground">
+						Desktop atlas
+					</p>
+					<h1
+						id="viewport-title"
+						className="font-semibold font-serif text-4xl tracking-tight"
+					>
+						Give the map more room
+					</h1>
+					<p className="mt-4 text-base text-muted-foreground leading-7">
+						AtlasTint requires a browser window of at least 1024 × 700 CSS
+						pixels. Enlarge this window or move it to a larger desktop display;
+						the atlas will open automatically.
+					</p>
+					<p className="mt-6 text-muted-foreground text-sm">
+						Your saved progress remains untouched.
+					</p>
+				</section>
+			</div>
 			<ScreenCredit />
 		</main>
 	);

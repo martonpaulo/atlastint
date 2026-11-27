@@ -49,62 +49,65 @@ export function PersistenceNotice() {
 	if (!storageNotice) return null;
 
 	return (
-		<div
-			className="fixed right-4 bottom-4 z-40 max-w-sm rounded-md border border-warning/40 bg-warning-surface px-4 py-3 text-warning-foreground text-xs leading-5 shadow-warning"
-			role="status"
-		>
-			{storageNotice}
-			{incompatibleRecord || persistenceMode === "future-blocked" ? (
-				<div className="mt-3 flex flex-wrap gap-2">
-					{incompatibleRecord ? (
-						<Button
-							variant="outline"
-							onClick={() => downloadIncompatibleRecord(incompatibleRecord)}
-						>
-							Download saved file
-						</Button>
-					) : null}
-					{persistenceMode === "future-blocked" ? (
-						<Button
-							variant="destructive"
-							onClick={() => setConfirmingReplace(true)}
-						>
-							Replace it
-						</Button>
-					) : null}
-				</div>
-			) : null}
+		// The toast is a container: its width cap holds the floating surface, and the text fills it.
+		<div className="fixed right-4 bottom-4 z-40 max-w-sm">
+			<div
+				className="rounded-md border border-warning/40 bg-warning-surface px-4 py-3 text-warning-foreground text-xs leading-5 shadow-warning"
+				role="status"
+			>
+				{storageNotice}
+				{incompatibleRecord || persistenceMode === "future-blocked" ? (
+					<div className="mt-3 flex flex-wrap gap-2">
+						{incompatibleRecord ? (
+							<Button
+								variant="outline"
+								onClick={() => downloadIncompatibleRecord(incompatibleRecord)}
+							>
+								Download saved file
+							</Button>
+						) : null}
+						{persistenceMode === "future-blocked" ? (
+							<Button
+								variant="destructive"
+								onClick={() => setConfirmingReplace(true)}
+							>
+								Replace it
+							</Button>
+						) : null}
+					</div>
+				) : null}
 
-			<Dialog open={confirmingReplace} onOpenChange={setConfirmingReplace}>
-				<DialogContent>
-					<DialogHeader>
-						<DialogTitle>Replace the newer saved progress?</DialogTitle>
-						<DialogDescription>
-							The progress saved in this browser was written by a newer
-							AtlasTint version. Replacing it permanently discards that record
-							and saves this session over it instead. Download it first if you
-							may want it back.
-						</DialogDescription>
-					</DialogHeader>
-					<DialogFooter>
-						<Button
-							variant="destructive"
-							onClick={() => {
-								replaceIncompatibleRecord();
-								setConfirmingReplace(false);
-							}}
-						>
-							Replace saved progress
-						</Button>
-						<Button
-							variant="outline"
-							onClick={() => setConfirmingReplace(false)}
-						>
-							Cancel
-						</Button>
-					</DialogFooter>
-				</DialogContent>
-			</Dialog>
+				<Dialog open={confirmingReplace} onOpenChange={setConfirmingReplace}>
+					<DialogContent>
+						<DialogHeader>
+							<DialogTitle>Replace the newer saved progress?</DialogTitle>
+							<DialogDescription>
+								The progress saved in this browser was written by a newer
+								AtlasTint version. Replacing it permanently discards that record
+								and saves this session over it instead. Download it first if you
+								may want it back.
+							</DialogDescription>
+						</DialogHeader>
+						<DialogFooter>
+							<Button
+								variant="destructive"
+								onClick={() => {
+									replaceIncompatibleRecord();
+									setConfirmingReplace(false);
+								}}
+							>
+								Replace saved progress
+							</Button>
+							<Button
+								variant="outline"
+								onClick={() => setConfirmingReplace(false)}
+							>
+								Cancel
+							</Button>
+						</DialogFooter>
+					</DialogContent>
+				</Dialog>
+			</div>
 		</div>
 	);
 }

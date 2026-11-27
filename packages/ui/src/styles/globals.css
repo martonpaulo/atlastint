@@ -177,16 +177,13 @@
 	--duration-normal: 180ms;
 	--ease-standard: cubic-bezier(0.2, 0, 0, 1);
 
-	/* The standard's three weights and its measures, kept out of `@theme` so
+	/* The standard's three weights, kept out of `@theme` so
 	   Tailwind's `--font-weight-*` and container namespaces do not mint
 	   utilities that collide with the family utilities this product gains when
 	   it takes the fleet serif. */
 	--weight-body: 400;
 	--weight-strong: 600;
 	--weight-display: 700;
-	--measure: 68ch;
-	--measure-narrow: 44ch;
-	--measure-title: 16ch;
 }
 
 @theme inline {
@@ -330,6 +327,8 @@
 	}
 	html {
 		@apply bg-background font-sans;
+		/* Interface standard rule 17: short and long pages keep one content left edge. */
+		scrollbar-gutter: stable;
 	}
 	body {
 		@apply m-0 bg-background font-sans text-foreground antialiased;

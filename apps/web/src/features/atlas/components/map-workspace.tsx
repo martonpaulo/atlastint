@@ -391,7 +391,7 @@ export function MapWorkspace(props: MapWorkspaceProps) {
 					<h1 className="font-semibold font-serif text-2xl tracking-tight">
 						{manifest.name}
 					</h1>
-					<p className="mt-0.5 max-w-2xl text-muted-foreground text-xs leading-5">
+					<p className="mt-0.5 text-muted-foreground text-xs leading-5">
 						{manifest.description}
 					</p>
 				</div>

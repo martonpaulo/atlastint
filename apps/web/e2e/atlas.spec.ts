@@ -357,12 +357,12 @@ test("keeps the workspace usable at an effective 200% desktop zoom", async ({
 		scrollHeight: document.documentElement.scrollHeight,
 		scrollWidth: document.documentElement.scrollWidth,
 	}));
-	expect(dimensions).toEqual({
-		clientHeight: 700,
-		clientWidth: 1024,
-		scrollHeight: 700,
-		scrollWidth: 1024,
-	});
+	expect(dimensions.clientHeight).toBe(700);
+	expect(dimensions.clientWidth).toBe(1024);
+	// Nothing overflows. `scrollbar-gutter: stable` (#104) reserves the scrollbar space where the
+	// browser draws classic scrollbars, so the content can be narrower than the viewport.
+	expect(dimensions.scrollHeight).toBeLessThanOrEqual(dimensions.clientHeight);
+	expect(dimensions.scrollWidth).toBeLessThanOrEqual(dimensions.clientWidth);
 });
 
 test("renders light whatever the system or a stored appearance says", async ({

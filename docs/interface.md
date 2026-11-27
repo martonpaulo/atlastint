@@ -24,6 +24,7 @@ The rules for AtlasTint's components, styling, visual direction and states, move
 - Icon-only buttons require an accessible name.
 - Every interactive element requires visible `:focus-visible` treatment.
 - Do not use generic `div` elements as buttons, links, checkboxes, or listbox options.
+- Text fills its column, with no width cap of its own; a cap goes only on a container (a card, a toast, the page column), never on an element with text classes. The page reserves the scrollbar space with `html { scrollbar-gutter: stable }`. `scripts/text_width_check.py` checks both in `pnpm lint` and `pnpm build` ([#104](https://github.com/martonpaulo/atlastint/issues/104)).
 
 All reusable visual values must come from semantic design tokens where practical:
 
