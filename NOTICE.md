@@ -35,7 +35,6 @@ AtlasTint commits optimized derived TopoJSON rather than unexplained raw archive
 
 The preprocessing pipeline maps upstream identifiers to application-owned stable IDs, removes unused properties, combines multi-part entities, extracts parent boundary meshes from shared child arcs, preserves shared topology, quantizes coordinates, simplifies conservatively with spherical weights, rejects invalid manifest/geometry mappings, and removes a ring only when simplification has collapsed its winding into an impossible globe-sized complement. Generated metadata records the exact thresholds and source checksums used for each build.
 
-
 <br />
 
 ---
@@ -48,11 +47,11 @@ The app self-hosts three families, all under the SIL Open Font License 1.1. The 
 vendored beside the files the social-card pipeline uses, because the same families set the card and
 the interface:
 
-| Family | Where it is used | Licence text |
-| --- | --- | --- |
-| [Source Serif 4](https://github.com/adobe-fonts/source-serif) | every title | [`design/social-card/fonts/SourceSerif4-OFL.txt`](design/social-card/fonts/SourceSerif4-OFL.txt) |
-| [Figtree](https://github.com/erikdkennedy/figtree) | the interface | [`design/social-card/fonts/Figtree-OFL.txt`](design/social-card/fonts/Figtree-OFL.txt) |
-| [Gabarito](https://github.com/naipefoundry/gabarito) | display headings | [`design/social-card/fonts/Gabarito-OFL.txt`](design/social-card/fonts/Gabarito-OFL.txt) |
+| Family                                                        | Where it is used | Licence text                                                                                     |
+| ------------------------------------------------------------- | ---------------- | ------------------------------------------------------------------------------------------------ |
+| [Source Serif 4](https://github.com/adobe-fonts/source-serif) | every title      | [`design/social-card/fonts/SourceSerif4-OFL.txt`](design/social-card/fonts/SourceSerif4-OFL.txt) |
+| [Figtree](https://github.com/erikdkennedy/figtree)            | the interface    | [`design/social-card/fonts/Figtree-OFL.txt`](design/social-card/fonts/Figtree-OFL.txt)           |
+| [Gabarito](https://github.com/naipefoundry/gabarito)          | display headings | [`design/social-card/fonts/Gabarito-OFL.txt`](design/social-card/fonts/Gabarito-OFL.txt)         |
 
 The binaries come from Fontsource (`@fontsource-variable/source-serif-4`, `@fontsource/figtree`,
 `@fontsource/gabarito`), pinned to exact versions; each package carries the same licence text, and

@@ -28,6 +28,7 @@ rewrite of the product core. The durable product boundary and non-goals are reco
 <br />
 
 ## 🌱 Quick Start
+
 Requires **Node.js 24**, **pnpm 11.4**, Git, and a Chromium-based desktop browser for the Playwright suite.
 
 ```bash
@@ -44,33 +45,35 @@ AtlasTint deliberately requires at least **1024 × 700 CSS pixels**: below eithe
 <br />
 
 ## 🛠 Commands
-| Command | What it does |
-| --- | --- |
-| `pnpm validate` | Run the complete gate before a commit: `format`, `lint`, `check-types`, `test`, `geo:check`, `test:e2e`, `build` |
-| `pnpm dev:web` | Start the development server for the web app on port 3001 |
-| `pnpm dev` | Start the development task of every workspace |
-| `pnpm build` | Build every workspace for production, plus the style check |
-| `pnpm format` | Check Biome formatting, changing nothing |
-| `pnpm format:fix` | Apply Biome formatting to disk |
-| `pnpm lint` | Run the Biome lint rules |
-| `pnpm check` | Run the Biome lint and format checks together |
-| `pnpm check:fix` | Apply every safe Biome lint and format fix to disk |
-| `pnpm check-types` | Run TypeScript across every workspace |
-| `pnpm test` | Run the Vitest unit and component tests |
-| `pnpm test:e2e` | Run the critical Playwright journeys |
-| `pnpm geo:build` | Regenerate the geographic artifacts from the documented upstream sources |
-| `pnpm geo:check` | Run the manifest-to-geometry invariants and the source checks |
-| `pnpm social-card` | Render the 1200 × 630 social preview into `apps/web/public/social-card.jpg` |
+
+| Command            | What it does                                                                                                     |
+| ------------------ | ---------------------------------------------------------------------------------------------------------------- |
+| `pnpm validate`    | Run the complete gate before a commit: `format`, `lint`, `check-types`, `test`, `geo:check`, `test:e2e`, `build` |
+| `pnpm dev:web`     | Start the development server for the web app on port 3001                                                        |
+| `pnpm dev`         | Start the development task of every workspace                                                                    |
+| `pnpm build`       | Build every workspace for production, plus the style check                                                       |
+| `pnpm format`      | Check Biome formatting, changing nothing                                                                         |
+| `pnpm format:fix`  | Apply Biome formatting to disk                                                                                   |
+| `pnpm lint`        | Run the Biome lint rules                                                                                         |
+| `pnpm check`       | Run the Biome lint and format checks together                                                                    |
+| `pnpm check:fix`   | Apply every safe Biome lint and format fix to disk                                                               |
+| `pnpm check-types` | Run TypeScript across every workspace                                                                            |
+| `pnpm test`        | Run the Vitest unit and component tests                                                                          |
+| `pnpm test:e2e`    | Run the critical Playwright journeys                                                                             |
+| `pnpm geo:build`   | Regenerate the geographic artifacts from the documented upstream sources                                         |
+| `pnpm geo:check`   | Run the manifest-to-geometry invariants and the source checks                                                    |
+| `pnpm social-card` | Render the 1200 × 630 social preview into `apps/web/public/social-card.jpg`                                      |
 
 Focused commands are available for normal development; only `pnpm validate` is the gate.
 
 <br />
 
 ## 🔐 Secrets and variables
+
 AtlasTint reads no secret at all: it has no account, no backend, no analytics and no API key, and CI publishes to GitHub Pages with the workflow's own token.
 
-| Name | Where | What for |
-| --- | --- | --- |
+| Name                  | Where                              | What for                                                                                                                                                                            |
+| --------------------- | ---------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `ATLAS_GEO_CACHE_DIR` | Local shell, `pnpm geo:build` only | Optional. Absolute path to a directory holding the verified `world.zip`, `brazil.zip` and `spain.zip` archives, so the pipeline builds offline or repeatedly without re-downloading |
 
 ---
@@ -264,7 +267,7 @@ The deployed page carries its metadata statically in `index.html` rather than in
 ## Limitations
 
 - AtlasTint is desktop-only and deliberately provides no compressed mobile workspace.
-- Visit dates are already supported by the persisted model but do not yet have an editing UI, and they deliberately have no visual effect: the temporal fill mode is **Selection order**, which ranks the regions currently selected from *First marked* to *Most recently marked*. Deselecting closes the visual gap without renumbering stored history.
+- Visit dates are already supported by the persisted model but do not yet have an editing UI, and they deliberately have no visual effect: the temporal fill mode is **Selection order**, which ranks the regions currently selected from _First marked_ to _Most recently marked_. Deselecting closes the visual gap without renumbering stored history.
 - JSON import replaces compatible local progress as one atomic operation rather than merging individual selections.
 - The catalog currently ships three presets; there is no end-user preset installation UI.
 - Political and administrative boundaries reflect the documented source versions and inclusion policies, not a claim that every boundary is universally uncontested.
