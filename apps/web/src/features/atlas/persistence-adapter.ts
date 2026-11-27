@@ -108,8 +108,9 @@ export function createPersistenceAdapter(
 				return {
 					mode: "durable",
 					state: createDefaultState(),
+					incompatibleRecord: raw,
 					message:
-						"Saved progress was malformed. AtlasTint started safely with empty progress.",
+						"Saved progress could not be read. AtlasTint started with empty progress; download the unreadable record before your first change replaces it.",
 				};
 			}
 		},

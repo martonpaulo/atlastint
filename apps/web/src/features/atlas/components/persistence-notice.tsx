@@ -54,7 +54,7 @@ export function PersistenceNotice() {
 			role="status"
 		>
 			{storageNotice}
-			{persistenceMode === "future-blocked" ? (
+			{incompatibleRecord || persistenceMode === "future-blocked" ? (
 				<div className="mt-3 flex flex-wrap gap-2">
 					{incompatibleRecord ? (
 						<Button
@@ -64,12 +64,14 @@ export function PersistenceNotice() {
 							Download saved file
 						</Button>
 					) : null}
-					<Button
-						variant="destructive"
-						onClick={() => setConfirmingReplace(true)}
-					>
-						Replace it
-					</Button>
+					{persistenceMode === "future-blocked" ? (
+						<Button
+							variant="destructive"
+							onClick={() => setConfirmingReplace(true)}
+						>
+							Replace it
+						</Button>
+					) : null}
 				</div>
 			) : null}
 

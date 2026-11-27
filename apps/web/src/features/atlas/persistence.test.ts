@@ -99,8 +99,19 @@ describe("persistence", () => {
 		});
 		const result = adapter.load();
 		expect(result.mode).toBe("durable");
-		expect(result.message).toMatch(/malformed/i);
+		expect(result.message).toMatch(/could not be read/i);
 		expect(result.state).toEqual(createDefaultState());
+		expect(result.incompatibleRecord).toBe("{broken");
+	});
+
+	it("returns the bytes of a record that matches no schema", () => {
+		const record = JSON.stringify({ schemaVersion: 1, presets: 7 });
+		const result = createPersistenceAdapter({
+			getItem: () => record,
+			setItem: () => undefined,
+		}).load();
+		expect(result.mode).toBe("durable");
+		expect(result.incompatibleRecord).toBe(record);
 	});
 
 	it("reads a stored dark or system appearance as light and keeps the progress", () => {
