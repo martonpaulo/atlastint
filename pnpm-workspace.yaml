@@ -2,7 +2,7 @@ packages:
   - apps/*
   - packages/*
 catalog:
-  zod: ^4.4.3
+  zod: ^4.6.6
   typescript: ^6
   "@types/node": ^22.20.2
   lucide-react: ^1.44.0
