@@ -13,7 +13,6 @@ catalog:
   "@types/react-dom": ^19.3.0
   tailwindcss: ^4.3.5
 
-
 # jsdom, which vitest pulls in, still resolves an undici below the patched
 # 7.29.0. It is a test-time dependency and reaches no browser; drop this entry
 # once jsdom ships the range itself.

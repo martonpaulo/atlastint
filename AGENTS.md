@@ -32,11 +32,11 @@ Change an identifier or policy recorded above only through an explicit task desc
 
 Before editing under a path, read the file its row names. A module with rules of its own keeps them in its own `AGENTS.md` of at most 150 lines, beside a `CLAUDE.md` symlink, and has a row here; this file stays at most 200 lines.
 
-| Path | Read first |
-| :--- | :--- |
-| ``apps/web/src/`, `packages/`, `scripts/geo/`` | ``docs/architecture.md`` |
-| ``apps/web/src/components/`, `apps/web/src/features/*/components/`, `packages/ui/`` | ``docs/interface.md`` |
-| ``apps/web/e2e/`, `*.test.ts`, `*.test.tsx`` | ``docs/testing.md`` |
+| Path                                                                                | Read first             |
+| :---------------------------------------------------------------------------------- | :--------------------- |
+| ``apps/web/src/`, `packages/`, `scripts/geo/``                                      | `docs/architecture.md` |
+| ``apps/web/src/components/`, `apps/web/src/features/*/components/`, `packages/ui/`` | `docs/interface.md`    |
+| ``apps/web/e2e/`, `*.test.ts`, `*.test.tsx``                                        | `docs/testing.md`      |
 
 ## Instruction hierarchy and sources of truth
 
