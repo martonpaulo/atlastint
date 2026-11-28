@@ -17,7 +17,7 @@
 - Product copy: English (`en-US`) is the source and fallback language; add localization only through an explicit product request.
 - Branch policy: The owner and the owner's agents commit validated work directly to `main` in focused single-concern commits (owner decision, 2026-09-11). Branches and pull requests stay available for work that benefits from review, and are required for outside contributors.
 - Commit policy: Commit completed, validated task work automatically using focused Conventional Commits.
-- Push policy: Push completed, validated work automatically: to `main` for direct work, to its branch when a pull request is used.
+- Push policy: Push completed, validated work automatically: to `main` for direct work, to its branch when a pull request is used. A cloud session pushes `main` too, only for a `runs: cloud` issue whose gates all ran there (owner, 2026-11-27). Cloud setup command: `bash scripts/cloud-setup.sh`.
 - Cloud hand-off: on (owner, 2026-11-28): a cloud session also delivers the `[cloud]` Tasks of a split issue, on `cloud/<issue>` when it cannot push `main`.
 - Product versioning: Continuous deployment without a user-visible product version; persistence and import schema versions remain explicit and independent.
 - Merge policy: when a pull request is used, merge it into `main` with a merge commit, `gh pr merge <number> --merge --delete-branch`, so every branch commit reaches `main` ([martonpaulo/skill-deck#277](https://github.com/martonpaulo/skill-deck/issues/277)).
