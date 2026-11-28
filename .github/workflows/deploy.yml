@@ -14,7 +14,8 @@ permissions:
 
 concurrency:
   group: pages
-  # A deployment in progress always finishes; a newer run waits for it.
+  # A deployment in progress always finishes; a newer run waits for it. A cancelled
+  # deployment records an error status on github-pages that can stay the latest one.
   cancel-in-progress: false
 
 jobs:
